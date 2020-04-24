@@ -73,9 +73,9 @@ namespace WPFTransport
                 gayBox.Items.Clear();
 
                 string Head = "  Von" + "         " + "Abfahrt"
-                    + "            " + "Dauer"
-                    + "            " + "Destination"
-                    + "               " + "Ankunft";
+                    + "           " + "Dauer"
+                    + "           " + "Destination"
+                    + "           " + "Ankunft";
                 string Line = "‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
                 gayBox.Items.Add(Head);
                 gayBox.Items.Add(Line);
