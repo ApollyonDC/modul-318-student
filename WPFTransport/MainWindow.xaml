@@ -16,7 +16,7 @@
             </Button.Triggers>
         </Button>
 
-        <DatePicker x:Name="Datum" HorizontalAlignment="Left" Height="27" Margin="26,144,0,0" VerticalAlignment="Top" Width="132" DisplayDate="2020-04-23" Background="White">
+        <DatePicker TabIndex="3" x:Name="Datum" HorizontalAlignment="Left" Height="27" Margin="26,144,0,0" VerticalAlignment="Top" Width="132" DisplayDate="2020-04-23" Background="White">
             <DatePicker.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
                     <GradientStop Color="#FFACACAC" Offset="0"/>
@@ -35,9 +35,9 @@
         <Label x:Name="ZeitLabel" Content="Zeit" HorizontalAlignment="Left" Margin="175,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.042,0.415" Height="26" Width="30"/>
         <Label x:Name="AbLabel" Content="Ab" HorizontalAlignment="Left" Margin="246,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.042,0.415" Height="26" Width="25"/>
         <Label x:Name="AnLabel" Content="An" HorizontalAlignment="Left" Margin="303,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.042,0.415" Height="26" Width="25"/>
-        <Button x:Name="VerbindungSuchen" Content="Verbindung suchen  →" HorizontalAlignment="Left" Margin="345,144,0,0" VerticalAlignment="Top" Width="188" Height="27" Click="VerbindungSuchen_Click"/>
+        <Button TabIndex="5" x:Name="VerbindungSuchen" Content="Verbindung suchen  →" HorizontalAlignment="Left" Margin="345,144,0,0" VerticalAlignment="Top" Width="188" Height="27" Click="VerbindungSuchen_Click"/>
         <Button x:Name="ViaBox" Content="Via hinzufügen +" HorizontalAlignment="Left" Margin="533,94,0,0" VerticalAlignment="Top" Width="103" BorderThickness="0" Height="19" RenderTransformOrigin="0.276,0.562" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button x:Name="StationButton" Content="Stations Fahrplan →" HorizontalAlignment="Left" Margin="533,149,0,0" VerticalAlignment="Top" Width="113" BorderThickness="0" Height="17" RenderTransformOrigin="0.276,0.562" BorderBrush="{x:Null}" Background="{x:Null}" Click="StationButton_Click"/>
+        <Button TabIndex="6" x:Name="StationButton" Content="Stations Fahrplan →" HorizontalAlignment="Left" Margin="533,149,0,0" VerticalAlignment="Top" Width="113" BorderThickness="0" Height="17" RenderTransformOrigin="0.276,0.562" BorderBrush="{x:Null}" Background="{x:Null}" Click="StationButton_Click"/>
         <Button Content="⇋&#xA;" HorizontalAlignment="Left" Margin="254,83,0,0" VerticalAlignment="Top" Width="51" BorderThickness="0" Height="34" RenderTransformOrigin="0.463,0.445" Click="Button_Click_1" FontSize="26" BorderBrush="{x:Null}" Background="{x:Null}"/>
         <ScrollBar HorizontalAlignment="Left" Margin="623,222,0,0" VerticalAlignment="Top" Height="177" RenderTransformOrigin="0.818,0.497"/>
         <Image HorizontalAlignment="Left" Height="33" Margin="26,13,0,0" VerticalAlignment="Top" Width="58" Source="sbb_logo.jpg"/>
@@ -52,11 +52,11 @@
         <Rectangle Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="1" Margin="159,35,0,0" VerticalAlignment="Top" Width="54"/>
         <Rectangle Fill="#FFA8A8A8" HorizontalAlignment="Left" Height="1" Margin="166,29,0,0" VerticalAlignment="Top" Width="47"/>
 
-        <xctk:TimePicker x:Name="Zeit" HorizontalAlignment="Left" Margin="166,144,0,0" VerticalAlignment="Top" Width="76" Height="27"/>
-        <ComboBox x:Name="NachBox" HorizontalAlignment="Left" Margin="317,90,0,0" VerticalAlignment="Top" Width="216" Height="27" IsEditable="True" KeyUp="NachBox_KeyUp"/>
-        <ComboBox x:Name="VonBox" HorizontalAlignment="Left" Margin="26,90,0,0" VerticalAlignment="Top" Width="216" Height="27" IsEditable="True" KeyUp="VonBox_KeyUp"/>
-        <ListBox x:Name="gayBox" HorizontalAlignment="Left" Height="165" Margin="26,234,0,0" VerticalAlignment="Top" Width="584" FontFamily="Segoe UI Light" FontSize="20" Background="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxWidth="584" MaxHeight="165"/>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="632,29,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.5,0.5">
+        <xctk:TimePicker TabIndex="4" x:Name="Zeit" HorizontalAlignment="Left" Margin="166,144,0,0" VerticalAlignment="Top" Width="76" Height="27"/>
+        <ComboBox TabIndex="1" x:Name="NachBox" HorizontalAlignment="Left" Margin="317,90,0,0" VerticalAlignment="Top" Width="216" Height="27" IsEditable="True" KeyUp="NachBox_KeyUp"/>
+        <ComboBox TabIndex="0" x:Name="VonBox" HorizontalAlignment="Left" Margin="26,90,0,0" VerticalAlignment="Top" Width="216" Height="27" IsEditable="True" KeyUp="VonBox_KeyUp"/>
+        <ListBox TabIndex="7" x:Name="gayBox" HorizontalAlignment="Left" Height="165" Margin="26,234,0,0" VerticalAlignment="Top" Width="584" FontFamily="Segoe UI Light" FontSize="20" Background="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MaxWidth="584" MaxHeight="165"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="632,29,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -66,7 +66,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="632,29,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.5,0.5">
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="1" Margin="632,29,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
