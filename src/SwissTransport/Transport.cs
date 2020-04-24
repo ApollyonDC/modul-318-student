@@ -9,7 +9,7 @@ namespace SwissTransport
         public Stations GetStations(string query)
         {
             query = System.Uri.EscapeDataString(query);
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/locations?query=" + query);
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/locations?query=" + query + "&type=station");
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 
@@ -24,11 +24,10 @@ namespace SwissTransport
             return null;
         }
 
-        public StationBoardRoot GetStationBoard(string station, string id)
+        public StationBoardRoot GetStationBoard(string station)
         {
             station = System.Uri.EscapeDataString(station);
-            id = System.Uri.EscapeDataString(id);
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/stationboard?station=" + station + "&id=" + id);
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/stationboard?station=" + station);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 
@@ -43,11 +42,12 @@ namespace SwissTransport
             return null;
         }
 
-        public Connections GetConnections(string fromStation, string toStation)
+        public Connections GetConnections(string fromStation, string toStation, string Date, string Time, int IsArrivalTime)
         {
             fromStation = System.Uri.EscapeDataString(fromStation);
             toStation = System.Uri.EscapeDataString(toStation);
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation);
+
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation +"&date=" + Date + "&time=" + Time + "&isArrivalTime=" + IsArrivalTime);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 
@@ -60,6 +60,7 @@ namespace SwissTransport
             }
 
             return null;
+          
         }
 
         private static WebRequest CreateWebRequest(string url)
